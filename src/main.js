@@ -8,6 +8,7 @@ import './plugin/axios'
 import './element'
 import './filters/filters'
 import './plugin/axios'
+import 'turndown'
 
 
 Vue.config.productionTip = false

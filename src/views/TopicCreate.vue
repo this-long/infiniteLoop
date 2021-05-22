@@ -50,12 +50,17 @@
     </div>
   </div>
 </template>
-
 <script>
+import TurndownService from "turndown";
 import axios from "../plugin/axios";
 import Editor from "@tinymce/tinymce-vue";
 import { mapMutations, mapState } from "vuex";
 import HomeNav from "../components/HomeNav.vue";
+
+// let TurndownService = require("turndown");
+
+// let turndownService = new TurndownService();
+
 export default {
   components: {
     editor: Editor,
@@ -95,9 +100,14 @@ export default {
     if (this.createTopic.editTopic !== null) {
       console.log(this.createTopic.editTopic);
       const { tab, title, content } = this.createTopic.editTopic.data;
-      (this.typeValue = tab),
-        (this.titleInput = title),
-        (this.titleContent = content);
+      this.typeValue = tab;
+      this.titleInput = title;
+      let turndownService = new TurndownService();
+      let markdown = turndownService.turndown(content);
+      console.log(markdown);
+      markdown.replace(" ", "<br>");
+      console.log(markdown.replace(" ", "<br>"));
+      this.titleContent = markdown.replace(/[\f\n\r\t\v]/g, "<br>");
     }
   },
   beforeDestroy() {
