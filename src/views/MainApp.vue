@@ -15,15 +15,8 @@
               src="https://static2.cnodejs.org/public/images/cnodejs_light.svg"
               alt=""
             />
-            <img
-              class="demo"
-              src="http://demo.kangjingept.com:8020/cssthemes2/mstp_35_knowledge/images/logo.png"
-              alt=""
-            />
-            <img
-              src="http://www.ncst.edu.cn/atm/1513855787501/20171221193307749.png"
-              alt=""
-            />
+            <img class="demo" src="../../public/logo.png" alt="" />
+            <img src="../../public/20171221193307749.png" alt="" />
           </div>
         </div>
         <div class="call-our">
