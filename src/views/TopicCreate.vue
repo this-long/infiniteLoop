@@ -104,9 +104,9 @@ export default {
       this.titleInput = title;
       let turndownService = new TurndownService();
       let markdown = turndownService.turndown(content);
-      console.log(markdown);
+      // console.log(markdown);
       markdown.replace(" ", "<br>");
-      console.log(markdown.replace(" ", "<br>"));
+      // console.log(markdown.replace(" ", "<br>"));
       this.titleContent = markdown.replace(/[\f\n\r\t\v]/g, "<br>");
     }
   },
